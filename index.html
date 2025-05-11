@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社リングイン - 不動産とITの融合</title>
   <style>
-    body {
-        font-family: sans-serif;
-        margin: 0;
-        background: url('HP背景.jpg') repeat-y center top fixed;
-        background-size: 100% auto;
-        color: #fff;
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: sans-serif;
+      color: #fff;
+      background: url('HP背景.jpg') no-repeat center top fixed;
+      background-size: cover;
+      background-attachment: fixed;
     }
     header {
       background: #2c3e50;
@@ -35,9 +37,7 @@
   padding: 2em 1em;
   max-width: 800px;
   margin: auto;
-  /* background: white; ←これを削除 */
-  background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒背景（任意） */
-  border-radius: 8px; /* 任意：角丸 */
+  background: transparent;
 
     }
     section {
