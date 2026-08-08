@@ -20,9 +20,22 @@ html, body {
       padding: 1em;
       text-align: center;
     }
-    header img {
-      max-height: 100px;
-      width: auto;
+.logo-crop {
+  width: 360px;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.logo-crop img {
+  width: 540px;
+  height: 540px;
+  max-width: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
     }
     nav {
       margin-top: 1em;
@@ -51,21 +64,30 @@ html, body {
     }
 
     /* スマホ対応 */
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5em 0;
-      }
-      header img {
-        max-height: 80px;
-      }
-    }
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  .logo-crop {
+    width: 280px;
+    height: 150px;
+  }
+
+  .logo-crop img {
+    width: 420px;
+    height: 420px;
+  }
+}
   </style>
 </head>
 <body>
 
   <header>
-    <img src="会社ロゴ.jpeg" alt="会社ロゴ">
+    <div class="logo-crop">
+  　<img src="会社ロゴ.jpeg" alt="会社ロゴ">
+　　</div>
     <h1>株式会社リングイン</h1>
     <p>不動産とITの力で、未来の暮らしをデザインする</p>
     <nav>
@@ -110,7 +132,7 @@ html, body {
   </main>
 
   <footer>
-    &copy; 2025 株式会社リングイン. All rights reserved.
+    &copy; 2026 株式会社リングイン. All rights reserved.
   </footer>
 
 </body>
