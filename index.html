@@ -5,81 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社リングイン - 不動産とITの融合</title>
   <style>
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: sans-serif;
-  color: #fff;
-  background: url('HP背景.jpg') no-repeat top center;
-  background-size: 100% auto; /* 横にフィット、縦は自然な比率 */
-}
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      color: white;
+      background: url('HP背景.jpg') no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
     
     header {
-      background: #2c3e50;
+      background: rgba(44, 62, 80, 0.75);
       color: white;
       padding: 1em;
       text-align: center;
     }
-.logo-crop {
-  width: 240px;
-  height: 180px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-.logo-crop img {
-  width: 280px;
-  height: 280px;
-  max-width: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+    
+    .logo-crop {
+      width: 240px;
+      height: 180px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
     }
+    
+    .logo-crop img {
+      width: 280px;
+      height: 280px;
+      max-width: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
     nav {
       margin-top: 1em;
     }
+    
     nav a {
       margin: 0 10px;
       color: white;
       text-decoration: none;
       display: inline-block;
     }
+    
     main {
-  padding: 2em 1em;
-  max-width: 800px;
-  margin: auto;
-  background: transparent;
-
+      min-height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    section {
-      margin-bottom: 2em;
+    
+    .main-copy {
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+      margin: 0;
+      padding: 0 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     footer {
       text-align: center;
       font-size: 0.9em;
-      color: #666;
+      color: white;
       padding: 1em;
     }
-
-    /* スマホ対応 */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 0.5em 0;
-  }
-
-  .logo-crop {
-    width: 200px;
-    height: 150px;
-  }
-
-  .logo-crop img {
-    width: 230px;
-    height: 230px;
-  }
-}
+    
+    @media (max-width: 600px) {
+    
+      body {
+        background: url('HP背景.jpg') no-repeat center top;
+        background-size: auto 100vh;
+        background-attachment: scroll;
+      }
+    
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
+    
+      .logo-crop {
+        width: 200px;
+        height: 150px;
+      }
+    
+      .logo-crop img {
+        width: 230px;
+        height: 230px;
+      }
+    
+      .main-copy {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 <body>
